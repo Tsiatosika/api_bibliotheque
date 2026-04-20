@@ -5,7 +5,8 @@
   "scripts": {
       "start": "node src/server.js",
       "dev": "nodemon src/server.js",
-      "db:sync": "node src/config/sync.js"
+      "db:sync": "node src/config/sync.js",
+      "db:seed": "node src/seeders/seed.js"
   },
   "keywords": [],
   "author": "",
