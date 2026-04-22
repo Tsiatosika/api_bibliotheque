@@ -19,8 +19,6 @@ app.use('/api/v1/books',   require('./routes/books'));
 app.use('/api/v1/borrows', require('./routes/borrows'));
 //Swager
 app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
-
-
 // Route 404
 app.use((req, res) => res.status(404).json({ success: false, message: 'Route introuvable' }));
 

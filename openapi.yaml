@@ -10,7 +10,6 @@ servers:
   - url: https://api.mabibliotheque.com/v1
     description: Serveur de production
 
-# ─── SÉCURITÉ ────────────────────────────────────────────────────
 components:
   securitySchemes:
     BearerAuth:
@@ -18,7 +17,6 @@ components:
       scheme: bearer
       bearerFormat: JWT
 
-  # ─── SCHÉMAS ───────────────────────────────────────────────────
   schemas:
 
     Author:
@@ -115,10 +113,8 @@ components:
         message: { type: string,  example: Validation échouée }
         errors:  { type: object }
 
-# ─── ENDPOINTS ───────────────────────────────────────────────────
 paths:
 
-  # ── AUTH ────────────────────────────────────────────────────────
   /auth/login:
     post:
       tags: [Authentification]
@@ -146,7 +142,6 @@ paths:
             application/json:
               schema: { $ref: '#/components/schemas/ErrorResponse' }
 
-  # ── AUTHORS ─────────────────────────────────────────────────────
   /authors:
     get:
       tags: [Authors]
@@ -251,7 +246,6 @@ paths:
         '401': { description: Non authentifié }
         '404': { description: Auteur introuvable }
 
-  # ── BOOKS ────────────────────────────────────────────────────────
   /books:
     get:
       tags: [Books]
@@ -343,7 +337,6 @@ paths:
         '401': { description: Non authentifié }
         '404': { description: Livre introuvable }
 
-  # ── BORROWS ──────────────────────────────────────────────────────
   /borrows:
     get:
       tags: [Borrows]
@@ -394,4 +387,3 @@ paths:
         '401': { description: Non authentifié }
         '404': { description: Emprunt introuvable }
         '422': { description: Livre déjà retourné } 
-        

@@ -3,7 +3,7 @@ const sequelize = require('../config/database');
 const { User, Author, Book, Borrow } = require('../models');
 
 async function seed() {
-  await sequelize.sync({ force: true }); // ⚠️ recrée toutes les tables
+  await sequelize.sync({ force: true }); 
 
   const user = await User.create({ name: 'Admin', email: 'admin@biblio.com', password: 'password123' });
 

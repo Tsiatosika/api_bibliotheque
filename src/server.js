@@ -1,6 +1,6 @@
 const app      = require('./app');
 const sequelize = require('./config/database');
-require('./models'); // charge les associations
+require('./models'); 
 
 const PORT = process.env.PORT || 8000;
 
