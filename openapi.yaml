@@ -394,3 +394,4 @@ paths:
         '401': { description: Non authentifié }
         '404': { description: Emprunt introuvable }
         '422': { description: Livre déjà retourné } 
+        
